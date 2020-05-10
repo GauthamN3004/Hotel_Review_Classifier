@@ -11,7 +11,7 @@ def home():
     if request.method == "POST":
         ps = PorterStemmer()
         review = request.form["text"]
-        if(len(review) < 20):
+        if(len(review) < 10):
             return render_template("index.html", review = "len_issue")
         else:
             cleaned = []
